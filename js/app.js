@@ -28,7 +28,6 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  // console.log(displayContent.description);
   if (text.length >= 30) {
     return text.slice(0, 30) + "<span class='fw-bold'>... read more</span>"
   }
@@ -65,7 +64,6 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-  // console.log(post);
   const image = post.image;
   const div = document.createElement("article");
   div.classList.add("post");
@@ -143,7 +141,6 @@ const createPost = (post) => {
                 </div>
               </div>
       `;
-  // console.log(post.comments[0].user);
   console.log(post);
   return div;
 };
@@ -169,11 +166,8 @@ const displayLikedPosts = () => {
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
-    // console.log(reportedPosts);
     const div = createPost(post);
-    // const div = document.createElement(div);
     document.getElementById("reported").appendChild(div);
-    // reportedPosts.appendChild(div)
   });
 };
 
@@ -182,5 +176,4 @@ const loadPosts = async () => {
   posts = await data.json();
   showPosts(posts);
 }
-
 loadPosts();
