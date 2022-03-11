@@ -63,76 +63,59 @@
     </main>
 
     <!---------------------------- accordion test---------- ------------------>
-    <div id="jan">
-        <section id="good" class="container mb-5 mt-5">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
+    <div id="question-part">
+        <h2 class="text-center mt-3">Question of JavaScript</h2>
+        <section id="good" class="container mb-5 mt-3">
+            <div class="accordion " id="accordionExample">
+                <div class="accordion-item border-2 border-dark">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
+                            <b> Localstorage vs SessionStorage</b>
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting
-                            that just about any HTML can go within the <code>.accordion-body</code>, though the
-                            transition
-                            does limit overflow.
+                            <b>Localstorage</b>
+                            <li>Localstorage persists the storage across browser sessions.If the domain is opened in a
+                                new tab, or the browser is closed and reopened, the storage is saved.</li>
+                            <li>local storage having min 5MB and 10 MB maximum.
+                            </li>
+                            <li>local storage can only be read by the client-side.</li>
+
+                            <b>SessionStorage</b>
+                            <li>SessionStorage is cleared when the page session ends.</li>
+                            <li>Session storage having a 5 megabyte
+                                maximum.</li>
+                            <li>Session storage can also read by the client-side. But Cookise both side.</li>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item border-2 border-dark">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
+                            <b>JavaScript Event Loop</b>
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting
-                            that just about any HTML can go within the <code>.accordion-body</code>, though the
-                            transition
-                            does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting
-                            that just about any HTML can go within the <code>.accordion-body</code>, though the
-                            transition
-                            does limit overflow.
+                            <p> Event loop check Call stack and Call back Queue compare, when call stack is doesn’t work
+                                or empty call back Queue call go to call stack. It usually use when settimeout()
+                                function because of synchronous.
+                                When synchronous function run on Call stack but synchronous function doesn’t work
+                                quickly,settimeout() function go to the web browser(Web Api) node.js(C++ Api) one after
+                                one and when it closed to web browser go to the Call back Queue .
+                                Then Event loop connect Call Back Queue and Call steck.But when a big while loop or for
+                                loop or any loop continue then Render Queue powerful then Call back Queue Because Event
+                                loop first go call for Render Queue then Call Stack. Same When promise() function use
+                                and promise function go to Microtask Queue.When Call stack is empty then first call
+                                Microtask Queue and second time call Call Stack for Event loop.
+                                <strong>This is how event loop
+                                    work in Javascript in my opinion..</strong>
+                            </p>
                         </div>
                     </div>
                 </div>

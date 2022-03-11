@@ -39,13 +39,13 @@ const displayContent = (text) => {
 
 const switchTab = (id) => {
   document.getElementById("liked").innerHTML = ''
-  document.getElementById("jan").style.display = "none"
+  document.getElementById("question-part").style.display = "none"
   document.getElementById("reported").innerHTML = ''
   if (id === "posts") {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
-    document.getElementById("jan").style.display = "block"
+    document.getElementById("question-part").style.display = "block"
   }
 
   else if (id === "liked") {
